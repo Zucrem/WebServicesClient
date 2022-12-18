@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.3 (RELEASE-2.4.3-ad3323c; 2019-01-21T17:46:06+0000) JAXWS-RI/2.3.2 JAXWS-API/2.3.2 JAXB-RI/2.3.2 JAXB-API/2.3.2 git-revision#unknown. --><xs:schema xmlns:tns="http://services/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://services/">
+
+<xs:element name="covidweek" type="tns:covidweek"/>
+
+<xs:element name="findAllCovidWeek" type="tns:findAllCovidWeek"/>
+
+<xs:element name="findAllCovidWeekResponse" type="tns:findAllCovidWeekResponse"/>
+
+<xs:element name="insertCovidWeek" type="tns:insertCovidWeek"/>
+
+<xs:complexType name="insertCovidWeek">
+<xs:sequence>
+<xs:element name="covidWeek" type="tns:covidweek" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="covidweek">
+<xs:sequence>
+<xs:element name="caseForeign" type="xs:int" minOccurs="0"/>
+<xs:element name="caseNewDiff" type="xs:int" minOccurs="0"/>
+<xs:element name="caseNewPrev" type="xs:int" minOccurs="0"/>
+<xs:element name="casePrison" type="xs:int" minOccurs="0"/>
+<xs:element name="caseWalkin" type="xs:int" minOccurs="0"/>
+<xs:element name="covidyear" type="xs:int" minOccurs="0"/>
+<xs:element name="deathNewDiff" type="xs:int" minOccurs="0"/>
+<xs:element name="deathNewPrev" type="xs:int" minOccurs="0"/>
+<xs:element name="newCase" type="xs:int" minOccurs="0"/>
+<xs:element name="newCaseExcludeabroad" type="xs:int" minOccurs="0"/>
+<xs:element name="newDeath" type="xs:int" minOccurs="0"/>
+<xs:element name="newRecovered" type="xs:int" minOccurs="0"/>
+<xs:element name="seq" type="xs:int" minOccurs="0"/>
+<xs:element name="totalCase" type="xs:int" minOccurs="0"/>
+<xs:element name="totalCaseExcludeabroad" type="xs:int" minOccurs="0"/>
+<xs:element name="totalDeath" type="xs:int" minOccurs="0"/>
+<xs:element name="totalRecovered" type="xs:int" minOccurs="0"/>
+<xs:element name="updateDate" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="weeknum" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findAllCovidWeek">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="findAllCovidWeekResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:covidweek" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
